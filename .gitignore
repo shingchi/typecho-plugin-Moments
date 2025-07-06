@@ -1,0 +1,7 @@
+plugin/pnpm-lock.yaml
+plugin/node_modules/
+plugin/src/
+plugin/.editorconfig
+plugin/package.json
+plugin/pnpm-lock.yaml
+plugin/rollup.config.js
