@@ -353,7 +353,7 @@ class Plugin implements PluginInterface
      * @param array $config 配置css和js的url
      * @return void
      */
-    public static function render($dom = '#moments', $pageSize, $config = [])
+    public static function render($dom = '#moments', $pageSize = NULL, $config = [])
     {
         $pageSize = $pageSize ?? Helper::options()->plugin('Moments')->pageSize;
         $assets = Helper::options()->pluginUrl . '/Moments/assets';
