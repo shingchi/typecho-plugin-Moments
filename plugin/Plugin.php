@@ -11,12 +11,12 @@ if (!defined('__TYPECHO_ROOT_DIR__')) {
 }
 
 /**
- * %description%
+ * 
  *
- * @package %name%
- * @author %author%
+ * @package typecho-plugin-Moments
+ * @author shingchi
  * @version %version%
- * @link %link%
+ * @link https://github.com/shingchi/typecho-plugin-Moments
  */
 class Plugin implements PluginInterface
 {
