@@ -14,17 +14,17 @@ CREATE TABLE IF NOT EXISTS `typecho_moments` (
   KEY `status` (`status`),
   KEY `created` (`created`),
   KEY `pinned` (`pinned`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `typecho_moments_hashtags` (
     `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(50) NOT NULL UNIQUE,
     `count` INT UNSIGNED DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- 关系表
 CREATE TABLE IF NOT EXISTS `typecho_moments_relation` (
   `moment_id` INT NOT NULL,
   `tag_id` INT NOT NULL,
   PRIMARY KEY (`moment_id`,`tag_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
