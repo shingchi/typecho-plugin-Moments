@@ -66,8 +66,11 @@ class Widget extends TypechoWidget
 
         // uid content created updated status uuid ip agent pinned source
         try {
-            // $moments = $this->request->get('@json');
-            $moment = $this->request->get('@json', []);
+            // $moment = $this->request->get('@json', []);
+            $moment = json_decode(file_get_contents('php://input'), true, 16);
+            // 验证 JSON 解析是否成功
+            if (json_last_error() !== JSON_ERROR_NONE) return $this->response->throwJson(['status' => 0, 'message' => 'Invalid JSON data']);
+
             $moment = Utils::removeXSS($moment);
             $moment['content'] = isset($moment['content']) ? trim($moment['content']) : '';
 
